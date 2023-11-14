@@ -2,7 +2,7 @@ public class Ajustes {
     private int id;
     private String fechaDeRegistro;
 
-    public boolean cambiarAjustes(){
+    public boolean cambiarAjustes() {
         return true;
     }
 }
