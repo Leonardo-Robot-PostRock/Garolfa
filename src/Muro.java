@@ -1,13 +1,25 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Muro {
     private int id;
     private int perfil_id;
-    private Publicacion publicacion;
+    private List<Publicacion> publicaciones;
 
-    public Publicacion mostrarPublicaciones() {
-        return publicacion;
+    public Muro() {
+        this.publicaciones = new ArrayList<>();
     }
 
-    public Publicacion filtrarPublicaciones() {
-        return publicacion;
+    public void agregarPublicacion(Publicacion publicacion) {
+        this.publicaciones.add(publicacion);
+    }
+
+    public List<Publicacion> mostrarPublicaciones() {
+        return this.publicaciones;
+    }
+
+    // Método para filtrar publicaciones
+    public List<Publicacion> filtrarPublicaciones() {
+        return this.publicaciones;
     }
 }
