@@ -4,14 +4,14 @@ public class Perfil extends Usuario{
     private String direccion;
     private String formacion;
     private String estadoCivil;
-    private String fotoPerfil;
+    private Foto fotoPerfil;
     private String biografia;
 
     public Perfil(String nombre, String apodo, int telefono, int edad, String correo) {
         super(nombre, apodo, telefono, edad, correo);
     }
 
-    public Perfil(String nombre, String apodo, int telefono, int edad, String correo, String sexo, String direccion, String formacion, String estadoCivil, String fotoPerfil, String biografia) {
+    public Perfil(String nombre, String apodo, int telefono, int edad, String correo, String sexo, String direccion, String formacion, String estadoCivil, Foto fotoPerfil, String biografia) {
         super(nombre, apodo, telefono, edad, correo);
         this.sexo = sexo;
         this.direccion = direccion;
