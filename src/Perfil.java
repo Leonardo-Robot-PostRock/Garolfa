@@ -8,9 +8,10 @@ public class Perfil extends Usuario {
     private String estadoCivil;
     private Foto fotoPerfil;
     private String biografia;
-    private  Ajustes ajustes;
+    private Ajustes ajustes;
 
     private List<Publicacion> publicaciones;
+    private List<Amigo> amigos;
     private Muro muro;
 
     public Perfil(String nombre, String apodo, int telefono, int edad, String correo) {
@@ -18,8 +19,7 @@ public class Perfil extends Usuario {
     }
 
 
-
-    public Perfil(String nombre, String apodo, int telefono, int edad, String correo, String sexo, String direccion, String formacion, String estadoCivil, Foto fotoPerfil, String biografia, List<Publicacion> publicaciones) {
+    public Perfil(String nombre, String apodo, int telefono, int edad, String correo, String sexo, String direccion, String formacion, String estadoCivil, Foto fotoPerfil, String biografia, List<Publicacion> publicaciones, List<Amigo> amigos) {
         super(nombre, apodo, telefono, edad, correo);
         this.sexo = sexo;
         this.direccion = direccion;
@@ -27,6 +27,7 @@ public class Perfil extends Usuario {
         this.estadoCivil = estadoCivil;
         this.fotoPerfil = fotoPerfil;
         this.biografia = biografia;
+        this.amigos = amigos;
         this.muro = new Muro(publicaciones);
     }
 
