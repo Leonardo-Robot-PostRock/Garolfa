@@ -6,8 +6,8 @@ public class Muro {
     private int perfil_id;
     private List<Publicacion> publicaciones;
 
-    public Muro() {
-        this.publicaciones = new ArrayList<>();
+    public Muro(List<Publicacion> publicaciones) {
+        this.publicaciones = publicaciones;
     }
 
     public void agregarPublicacion(Publicacion publicacion) {
@@ -16,6 +16,10 @@ public class Muro {
 
     public List<Publicacion> mostrarPublicaciones() {
         return this.publicaciones;
+    }
+
+    public boolean actualizarMural() {
+        return true;
     }
 
     // Método para filtrar publicaciones
