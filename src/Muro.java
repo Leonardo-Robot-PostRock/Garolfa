@@ -19,11 +19,23 @@ public class Muro {
     }
 
     public boolean actualizarMural() {
+        // Lógica para actualizar el muro (puede incluir la actualización de la lista de publicaciones)
+        System.out.println("Muro actualizado.");
         return true;
     }
 
     // Método para filtrar publicaciones
-    public List<Publicacion> filtrarPublicaciones() {
-        return this.publicaciones;
+    public List<Publicacion> filtrarPublicaciones(String filtro) {
+        List<Publicacion> publicacionesFiltradas = new ArrayList<>();
+
+        for (Publicacion publicacion : this.publicaciones) {
+            // Aquí debes implementar la lógica de filtrado según tus necesidades
+            // En este ejemplo, se filtra por título, pero puedes ajustarlo según tus requisitos
+            if (publicacion.getTitulo().contains(filtro)) {
+                publicacionesFiltradas.add(publicacion);
+            }
+        }
+
+        return publicacionesFiltradas;
     }
 }
