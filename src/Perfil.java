@@ -12,6 +12,8 @@ public class Perfil extends Usuario {
 
     private List<Publicacion> publicaciones;
     private List<Amigo> amigos;
+    private List<Perfil> amigosPendientes;
+    private List<Perfil> amigosAceptados;
     private Muro muro;
 
     public Perfil(String nombre, String apodo, int telefono, int edad, String correo) {
@@ -43,12 +45,18 @@ public class Perfil extends Usuario {
         return true;
     }
 
-    public boolean enviarSolicitud(int solicitud) {
-        return true;
+    public boolean enviarSolicitud(Perfil amigo) {
+        return amigosPendientes.add(amigo);
     }
 
-    public int aceptarSolicitud(int solicitud) {
-        return solicitud;
+    public boolean aceptarSolicitud(Perfil amigo) {
+        boolean solicitudAceptada = amigosPendientes.remove(amigo);
+        if (solicitudAceptada) {
+            amigosAceptados.add(amigo);
+            amigo.amigosAceptados.add(this);
+
+        }
+        return solicitudAceptada;
     }
 
     public int eliminarAmigo(int idAmigo) {
