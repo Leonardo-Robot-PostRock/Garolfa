@@ -59,8 +59,12 @@ public class Perfil extends Usuario {
         return solicitudAceptada;
     }
 
-    public int eliminarAmigo(int idAmigo) {
-        return idAmigo;
+    public boolean eliminarAmigo(Perfil amigo) {
+        boolean eliminado = amigosAceptados.remove(amigo);
+        if (eliminado) {
+            amigo.amigosAceptados.remove(this);
+        }
+        return eliminado;
     }
 
     public int rechazarSolicitud(int idAmigoDestino) {
