@@ -1,6 +1,8 @@
+import java.util.Date;
+
 public class Ajustes {
     private int id;
-    private String fechaDeRegistro;
+    private Date fechaDeRegistro;
 
     public boolean cambiarAjustes() {
         return true;
