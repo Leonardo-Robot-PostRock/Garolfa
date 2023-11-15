@@ -1,8 +1,10 @@
+import java.util.UUID;
+
 public class Foto {
     private int id;
-    private int link;
+    private String link;
 
-    public Foto(int fotoId, int link) {
+    public Foto(int fotoId, String link) {
         this.id = fotoId;
         this.link = link;
     }
