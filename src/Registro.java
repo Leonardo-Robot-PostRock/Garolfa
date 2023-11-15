@@ -2,10 +2,10 @@ public class Registro {
     private int id;
     private String nombre;
     private String Apodo;
-    private int telefono;
+    private double telefono;
     private int edad;
 
-    public Registro(String nombre, String apodo, int telefono, int edad) {
+    public Registro(String nombre, String apodo, long telefono, int edad) {
         this.nombre = nombre;
         Apodo = apodo;
         this.telefono = telefono;
@@ -28,11 +28,11 @@ public class Registro {
         Apodo = apodo;
     }
 
-    public int getTelefono() {
+    public double getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(double telefono) {
         this.telefono = telefono;
     }
 
